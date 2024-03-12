@@ -22,5 +22,19 @@ Paper Trading App is a web application that allows users to practice trading sto
 
 ## Getting Started
 
-1. Clone the repository:
+1. Clone the repository
+2. Install dependencies for both frontend and backend
+3. Set up environment variables
 
+   - Create a `.env` file in the `server` directory.
+   - Add necessary environment variables (e.g., database connection string, API keys).
+   - Example:
+     ```
+     PORT=3000
+     DATABASE_URL=your-database-connection-string
+     FINNHUB_API_KEY=your-finnhub-api-key
+     ```
+
+4. Start the backend server
+5. Start the frontend development server
+6. . Access the application in your browser at `http://localhost:3000`
