@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+    font-family: "Mono", "Roboto Mono", "Vazirmatn", monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+     :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
+}
+
+body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient( to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+.hover-2 {
+    background-image: linear-gradient(#1095c1 0 0);
+    background-size: 200% .08em;
+    background-position: 200% 100%;
+    background-repeat: no-repeat;
+    transition: background-size .3s, background-position .3s .3s;
+}
+
+.hover-2:hover {
+    transition: background-size .3s .3s, background-position .3s;
+    background-size: 200% 100%;
+    background-position: 100% 100%;
+}
+
+.learn-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.chapter {
+    margin-bottom: 40px;
+}
+
+.chapter h2 {
+    color: #007bff;
+}
+
+.chapter h3 {
+    margin-top: 20px;
+    color: #555;
+}
+
+.chapter p,
+.chapter ul {
+    margin-bottom: 15px;
+}
+
+.intro-text {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.conclusion {
+    border-top: 2px solid #007bff;
+    padding-top: 20px;
+}
+
+.conclusion h2 {
+    color: #007bff;
+}

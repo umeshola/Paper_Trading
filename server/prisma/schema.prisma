@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       String @id @default(cuid()) @map("_id")
+  name     String @unique
+  password String 
+  balance  Int    @default(10000)
+  bought Bought[]
+  transaction Transaction[]
+}
+model Bought{
+  id         String   @id @default(cuid()) @map("_id")
+  stockname  String
+  stockprice Int
+  quantity   Int
+  time       DateTime
+  username   String
+  user      User @relation(fields: [username], references: [name], onDelete: Cascade)
+
+}
+model Transaction{
+  id         String   @id @default(cuid()) @map("_id")
+  stockname  String
+  srockprice Int
+  quantity   Int
+  time       DateTime
+  username   String
+  type       String
+  user       User @relation(fields: [username],references: [name],onDelete:Cascade)
+
+}
