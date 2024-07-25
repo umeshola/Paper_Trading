@@ -330,6 +330,6 @@ app.post('/buy', admin_auth, async(req, res) => {
 });
 
 
-const server = app.listen(3000, () => {
+const server = app.listen("https://paper-trading-eight.vercel.app", () => {
     console.log('Server is running on port 3000');
 });
